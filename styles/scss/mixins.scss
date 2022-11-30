@@ -1,0 +1,7 @@
+@mixin font_options($size, $color, $width, $line-height, $aligne) {
+    font-size: $size;
+    color: $color;
+    font-weight: $width;
+    line-height: $line-height;
+    text-align: $aligne;    
+}

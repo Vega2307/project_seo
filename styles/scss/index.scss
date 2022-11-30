@@ -1,0 +1,48 @@
+@import 'fonts';
+@import 'variables';
+@import 'mixins';
+@import 'header';
+@import 'main';
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-family: $montserrat;
+}
+
+ul {
+    list-style-type: none;
+}
+
+._wrapper {
+    width: 1375px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 47px;
+    padding-right: 47px;
+}
+
+a {
+    text-decoration: none;
+    color: #000000;
+}
+
+h2 {
+    @include font_options (50px, #000000, 600, 60.95px, center);
+}
+
+.button {
+    width: 357px;
+    height: 69px;
+    border: 2px #000000 solid;
+    border-radius: 13px;
+    @include font_options (30px, #000000, 600, 35.57px, center);
+    background-color: #ffd954;
+
+    &:active {
+        background-color: $active;
+    }
+}
+

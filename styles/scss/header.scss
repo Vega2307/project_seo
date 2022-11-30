@@ -1,0 +1,98 @@
+.header__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid black;
+    padding-bottom: 10px;
+
+    .header__logo {
+        width: 512px;
+        margin-left: -47px;
+        
+        p {
+            @include font_options (13px, #00000080, 300, 15.85px, center);
+            letter-spacing: 0.795em;
+            margin-top: -40px;
+        }
+    }
+
+    .header__cases {
+        display: flex;
+        align-items: center;
+        @include font_options (31px, #000000, 700, 37.79px, center);
+       text-decoration: underline;
+       margin-left: -90px;
+
+       a:hover {
+        color: gray;
+       }
+       a:active {
+        color: #ffd954;
+       }
+    }
+    
+    .header__call {
+        p {
+            @include font_options (20px, #000000, 400,24.38px, center)
+        }
+    
+        .header__call__button {
+            border: 1px solid #000000;
+            background-color: white;
+            padding: 10px 10px;
+            border-radius: 15px;
+            margin-left: 10px;
+
+            &:hover {
+                background-color: rgb(236, 235, 235);
+                color: #000000;
+            }
+            &:active {
+                background-color: #ffd954;
+            }
+        }
+    }
+}
+
+.header__bot {
+
+    .header__nav {
+        margin-top: 20px;
+        margin-bottom: 45px;
+
+        ul {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-left: 50px;
+            margin-right: 50px;
+
+            li {
+                position: relative;
+
+                &::after {
+                    display: block;
+                    position: absolute;
+                    left: 0;
+                    width: 0;
+                    height: 1px;
+                    background-color: #000000;
+                    content: '';
+                    transition: 0.3s;
+                }
+
+                &:hover::after {
+                    width: 100%;
+                }
+
+                a {
+                    @include font_options (20px, #0000009f, 400,24.38px, center);
+    
+                    &:hover {
+                        color: #000000;
+                    }
+                }                
+            }
+        }
+    }
+}
